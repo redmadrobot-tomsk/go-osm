@@ -1,4 +1,4 @@
-module github.com/omniscale/go-osm
+module github.com/redmadrobot-tomsk/go-osm
 
 go 1.21.0
 

@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/omniscale/go-osm"
+	"github.com/redmadrobot-tomsk/go-osm"
 )
 
 // Parser is a stream based parser for OSM diff files (.osc).
@@ -115,7 +115,7 @@ NextToken:
 					}
 				}
 				if p.conf.IncludeMetadata {
-					setElemMetadata(tok.Attr, &node.Element)
+					setElemMetadata(tok.Attr, &node.Element, del)
 				}
 			case "way":
 				for _, attr := range tok.Attr {
@@ -124,7 +124,7 @@ NextToken:
 					}
 				}
 				if p.conf.IncludeMetadata {
-					setElemMetadata(tok.Attr, &way.Element)
+					setElemMetadata(tok.Attr, &way.Element, del)
 				}
 			case "relation":
 				for _, attr := range tok.Attr {
@@ -133,7 +133,7 @@ NextToken:
 					}
 				}
 				if p.conf.IncludeMetadata {
-					setElemMetadata(tok.Attr, &rel.Element)
+					setElemMetadata(tok.Attr, &rel.Element, del)
 				}
 			case "nd":
 				for _, attr := range tok.Attr {
@@ -228,8 +228,9 @@ NextToken:
 	return nil
 }
 
-func setElemMetadata(attrs []xml.Attr, elem *osm.Element) {
+func setElemMetadata(attrs []xml.Attr, elem *osm.Element, deleted bool) {
 	elem.Metadata = &osm.Metadata{}
+	elem.Metadata.Deleted = deleted
 	for _, attr := range attrs {
 		switch attr.Name.Local {
 		case "version":

@@ -3,8 +3,8 @@ package pbf
 import (
 	"time"
 
-	"github.com/omniscale/go-osm"
-	"github.com/omniscale/go-osm/parser/pbf/internal/osmpbf"
+	"github.com/redmadrobot-tomsk/go-osm"
+	"github.com/redmadrobot-tomsk/go-osm/parser/pbf/internal/osmpbf"
 )
 
 func readDenseNodes(

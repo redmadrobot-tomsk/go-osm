@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/omniscale/go-osm"
+	"github.com/redmadrobot-tomsk/go-osm"
 )
 
 type Config struct {

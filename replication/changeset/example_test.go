@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/omniscale/go-osm/replication/changeset"
+	"github.com/redmadrobot-tomsk/go-osm/replication/changeset"
 )
 
 func Example() {

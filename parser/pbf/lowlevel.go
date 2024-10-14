@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/omniscale/go-osm/parser/pbf/internal/osmpbf"
+	"github.com/redmadrobot-tomsk/go-osm/parser/pbf/internal/osmpbf"
 )
 
 var supportedFeatured = map[string]bool{"OsmSchema-V0.6": true, "DenseNodes": true}

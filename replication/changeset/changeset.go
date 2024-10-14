@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/omniscale/go-osm/replication"
-	"github.com/omniscale/go-osm/replication/internal/source"
+	"github.com/redmadrobot-tomsk/go-osm/replication"
+	"github.com/redmadrobot-tomsk/go-osm/replication/internal/source"
 	"gopkg.in/yaml.v2"
 )
 

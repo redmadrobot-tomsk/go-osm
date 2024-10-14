@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	osm "github.com/omniscale/go-osm"
+	osm "github.com/redmadrobot-tomsk/go-osm"
 )
 
 func TestParse(t *testing.T) {

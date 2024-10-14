@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/omniscale/go-osm/replication/diff"
+	"github.com/redmadrobot-tomsk/go-osm/replication/diff"
 )
 
 func Example() {

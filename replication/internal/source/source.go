@@ -15,7 +15,7 @@ import (
 
 	"gopkg.in/fsnotify.v1"
 
-	"github.com/omniscale/go-osm/replication"
+	"github.com/redmadrobot-tomsk/go-osm/replication"
 )
 
 var isDebug = false
@@ -123,7 +123,7 @@ func (d *downloader) download(seq int, ext string) error {
 	if err != nil {
 		return err
 	}
-	req.Header.Set("User-Agent", "github.com/omniscale/go-osm")
+	req.Header.Set("User-Agent", "github.com/redmadrobot-tomsk/go-osm")
 	resp, err := d.client.Do(req)
 	if err != nil {
 		return err

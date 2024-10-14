@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/omniscale/go-osm"
-	"github.com/omniscale/go-osm/parser/changeset/internal/osmxml"
+	"github.com/redmadrobot-tomsk/go-osm"
+	"github.com/redmadrobot-tomsk/go-osm/parser/changeset/internal/osmxml"
 )
 
 type Parser struct {

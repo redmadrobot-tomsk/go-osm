@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/omniscale/go-osm/replication"
-	"github.com/omniscale/go-osm/replication/internal/source"
-	"github.com/omniscale/go-osm/state"
+	"github.com/redmadrobot-tomsk/go-osm/replication"
+	"github.com/redmadrobot-tomsk/go-osm/replication/internal/source"
+	"github.com/redmadrobot-tomsk/go-osm/state"
 )
 
 // NewDownloader starts a background downloader for OSM diff files (.osc.gz).

@@ -7,8 +7,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/omniscale/go-osm"
-	"github.com/omniscale/go-osm/parser/pbf"
+	"github.com/redmadrobot-tomsk/go-osm"
+	"github.com/redmadrobot-tomsk/go-osm/parser/pbf"
 )
 
 func Example() {

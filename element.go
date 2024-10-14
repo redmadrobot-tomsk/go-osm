@@ -26,6 +26,7 @@ type Metadata struct {
 	Version   int32
 	Timestamp time.Time
 	Changeset int64
+	Deleted   bool
 }
 
 // A Node contains lat/long coordinates.
@@ -43,6 +44,48 @@ type Way struct {
 	// Nodes specifies an ordered list of the actual nodes. Nodes can be empty
 	// if the information is not available (e.g. during parsing).
 	Nodes []Node
+}
+
+var CustomWayTags = map[string]bool{
+	"highway":        true,
+	"maxspeed":       true,
+	"layer":          true,
+	"tunnel":         true,
+	"bridge":         true,
+	"oneway":         true,
+	"ref":            true,
+	"access":         true,
+	"service":        true,
+	"winter_road":    true,
+	"toll":           true,
+	"width":          true,
+	"restriction":    true,
+	"noexit":         true,
+	"route":          true,
+	"ice_road":       true,
+	"lanes":          true,
+	"lanes:forward":  true,
+	"lanes:backward": true,
+	"area":           true,
+	"covered":        true,
+	"turn:lanes":     true,
+	"surface":        true,
+}
+
+var CustomRelationTags = map[string]bool{
+	"type":        true,
+	"restriction": true,
+}
+
+func (t *Tags) CustomTag(tagName string) string {
+	_, wayOk := CustomWayTags[tagName]
+	_, relationOk := CustomRelationTags[tagName]
+
+	if !wayOk && !relationOk {
+		panic(fmt.Sprintf("Unknown custom tag %s", tagName))
+	}
+
+	return (map[string]string)(*t)[tagName];
 }
 
 // IsClosed returns whether the first and last nodes are the same.

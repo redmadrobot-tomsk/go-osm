@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/omniscale/go-osm"
+	"github.com/redmadrobot-tomsk/go-osm"
 )
 
 func TestParse(t *testing.T) {
